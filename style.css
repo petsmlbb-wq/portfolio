@@ -1,0 +1,252 @@
+
+/* GENERAL SETTINGS */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: white;
+}
+
+/* HERO SECTION WITH DEMON SLAYER BACKGROUND */
+.hero {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.94),
+            rgba(30, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("image1.jpg.avif") center/cover no-repeat;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVIGATION BAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ff3434;
+    letter-spacing: 2px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff3434;
+}
+
+/* HERO CONTENT */
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 10%;
+    max-width: 850px;
+}
+
+.hero-content h3 {
+    color: #ff4545;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.hero-content h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: #ff3434;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.hero-content h2 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 14px 28px;
+    background: #c90020;
+    border: 1px solid #ff4b4b;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff243e;
+    box-shadow: 0 0 20px #c90020;
+    transform: translateY(-3px);
+}
+
+/* GENERAL SECTIONS */
+section {
+    padding: 85px 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.section-title span {
+    color: #ff3434;
+}
+
+/* ABOUT */
+
+
+.about {
+    background: #101010;
+    text-align: center;
+}
+
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    color: #ccc;
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+
+/* SKILLS */
+.skills-grid,
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 22px;
+}
+
+.skill,
+.project {
+    background: linear-gradient(145deg, #191919, #0c0c0c);
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skill:hover,
+.project:hover {
+    border-color: #ff3434;
+    transform: translateY(-6px);
+    box-shadow: 0 5px 25px rgba(255, 0, 0, 0.15);
+}
+
+.skill {
+    color: #ff6060;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+/* PROJECTS */
+.project h3 {
+    color: #ff4545;
+    margin-bottom: 15px;
+}
+
+.project p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* CONTACT */
+.contact {
+    background: #101010;
+    text-align: center;
+}
+
+.contact p {
+    color: #ccc;
+    line-height: 2;
+}
+
+.contact a:not(.btn) {
+    color: #ff5555;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    padding: 25px;
+    text-align: center;
+    color: #888;
+    background: #050505;
+    border-top: 1px solid #222;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .hero-content {
+        padding: 60px 7%;
+    }
+
+    .hero-content h2 {
+        font-size: 19px;
+    }
+
+    section {
+        padding: 65px 7%;
+    }
+}
